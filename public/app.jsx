@@ -1,3 +1,13 @@
+//Issue Three
+//In app.jsx we have all 3 components as well as the code that initializes our app
+//Right now it's fine, but in the future when we start introducing testing
+//it will be harder to isolate individual components
+
+//The plan is to remedy these issues with webpack
+//Webpack will let you bundle all of your 3rd party dependencies (react, react-dom, babel)
+//along with your application code (GreeterMessage, GreeterForm, Greeter class)
+//It's also going to let us break our code into separate files
+
 
 //GreeterMessage Component aka presentation component (child)
 var GreeterMessage = React.createClass({
