@@ -1,3 +1,6 @@
+var React = require('react');
+var ReactDOM = require('react-dom');
+
 
 //GreeterMessage Component aka presentation component (child)
 var GreeterMessage = React.createClass({
