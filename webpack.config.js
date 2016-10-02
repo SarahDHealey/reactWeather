@@ -7,6 +7,7 @@
 //get the output and then run them through es2015 as well
 //it knows what files to get based on the regex looking for .jsx extensions
 //then it's also going to make sure to exclude two files.
+//alias allows you to have shorter pathnames in the component files.
 module.exports = {
   entry: './public/app.jsx',
   output: {
@@ -14,6 +15,12 @@ module.exports = {
     filename: './public/bundle.js'
   },
   resolve: {
+    root: __dirname,
+    alias: {
+      Greeter: 'public/components/Greeter.jsx',
+      GreeterMessage: 'public/components/GreeterMessage.jsx',
+      GreeterForm: 'public/components/GreeterForm.jsx'
+    },
     extensions: ['', '.js', '.jsx']
   },
   module: {
