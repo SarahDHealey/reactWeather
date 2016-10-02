@@ -1,15 +1,6 @@
-//entry tells webpack where to start processing your code.
-//output is an object where there are two properties
-//the path to the folder (dirname gives the path to the current folder)
-//from that folder you can specify the filename
-//resolve takes an extensions array with a list of file extensions we want to process
-//telling the babel-loader to take our files, parse them through react
-//get the output and then run them through es2015 as well
-//it knows what files to get based on the regex looking for .jsx extensions
-//then it's also going to make sure to exclude two files.
-//alias allows you to have shorter pathnames in the component files.
+
 module.exports = {
-  entry: './public/app.jsx',
+  entry: './app/app.jsx',
   output: {
     path: __dirname,
     filename: './public/bundle.js'
@@ -17,9 +8,13 @@ module.exports = {
   resolve: {
     root: __dirname,
     alias: {
-      Greeter: 'public/components/Greeter.jsx',
-      GreeterMessage: 'public/components/GreeterMessage.jsx',
-      GreeterForm: 'public/components/GreeterForm.jsx'
+      Main: 'app/components/Main.jsx',
+      Nav: 'app/components/Nav.jsx',
+      Weather: 'app/components/Weather.jsx',
+      WeatherForm: 'app/components/WeatherForm.jsx',
+      WeatherMessage: 'app/components/WeatherMessage.jsx',
+      About: 'app/components/About.jsx',
+      Examples: 'app/components/Examples.jsx'
     },
     extensions: ['', '.js', '.jsx']
   },
@@ -28,7 +23,7 @@ module.exports = {
       {
         loader: 'babel-loader',
         query: {
-          presets: ['react', 'es2015']
+          presets: ['react', 'es2015', 'stage-0']
         },
         test: /\.jsx?$/,
         exclude: /(node_modules|bower_components)/
