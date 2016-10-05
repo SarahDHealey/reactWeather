@@ -9,6 +9,8 @@
   "author": "Sarah Healey",
   "license": "MIT",
   "dependencies": {
+    "axios": "^0.14.0",
+    "dotenv": "^2.0.0",
     "express": "^4.14.0",
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
