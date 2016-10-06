@@ -1,8 +1,7 @@
 var axios = require('axios');
-// import { config } from './../components/config';
 
 //generate the base url
-const OPEN_WEATHER_MAP_URL = `http://api.openweathermap.org/data/2.5/weather?appid=${process.env.S3_KEY}&units=imperial`;
+const OPEN_WEATHER_MAP_URL = `http://api.openweathermap.org/data/2.5/weather?appid=${process.env.OPENWEATHERMAPAPI_KEY}&units=imperial`;
 
 module.exports = {
   getTemp: function(location) {
