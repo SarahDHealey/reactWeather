@@ -3,7 +3,10 @@ var React = require('react');
 //stateless component
 var About = (props) => {
   return(
-    <h1>About</h1>
+    <div>
+      <h3>About</h3>
+      <p>Welcome to the About page!</p>
+    </div>
   )
 };
 

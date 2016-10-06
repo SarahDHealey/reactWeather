@@ -3,7 +3,10 @@ var React = require('react');
 //stateless component
 var Examples = (props) => {
   return(
-    <h1>Examples Component</h1>
+    <div>
+    <h3>Examples</h3>
+    <p>Welcome to examples page!</p>
+    </div>
   )
 };
 
