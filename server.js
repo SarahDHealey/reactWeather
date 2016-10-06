@@ -19,6 +19,6 @@ app.use(function(req, res, next){
 app.use(express.static('public'));
 //start the server
 //app.listen takes two arguments - the port and a function which will get called once the server is up
-app.listen(port, function() {
-  console.log('Express server is up on port ' + port);
+app.listen(PORT, function() {
+  console.log('Express server is up on port ' + PORT);
 })
