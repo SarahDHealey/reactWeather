@@ -1,8 +1,8 @@
 var React = require('react');
 var WeatherForm = require('WeatherForm');
 var WeatherMessage = require('WeatherMessage');
-var ErrorModal = require('ErrorModal');
 var openWeatherMap = require('openWeatherMap');
+var ErrorModal = require('ErrorModal');
 
 
 var Weather = React.createClass({
@@ -39,7 +39,7 @@ var Weather = React.createClass({
     function renderMessage(){
       if (isLoading) {
         return <h3 className="text-center">fetching weather...</h3>;
-      } 
+      }
        else if ( temp && location){
         return <WeatherMessage location={location} temp={temp}/>;
       }
