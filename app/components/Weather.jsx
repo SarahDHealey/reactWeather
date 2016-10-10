@@ -21,39 +21,34 @@ var Weather = React.createClass({
 
     openWeatherMap.getTemp(location).then(function(temp){
       that.setState({
-        errorstate: false,
-        isLoading: false,
         location: location,
-        temp: temp
+        temp: temp,
+        isLoading: false
       });
     },
-    function(errmessage){
+    function(e){
       that.setState({
         isLoading: false,
-        errorstate: true,
-        errorMessage: errmessage.message
+        errorMessage: e.message
       });
     });
   },
   render: function(){
-    var {isLoading, temp, location, errorstate, errorMessage} = this.state;
+    var {isLoading, temp, location, errorMessage} = this.state;
 
     function renderMessage(){
       if (isLoading) {
         return <h3 className="text-center">fetching weather...</h3>;
-      } else if (errorstate){
-        return <h3> Could not find your city!</h3>;
-      }
+      } 
        else if ( temp && location){
         return <WeatherMessage location={location} temp={temp}/>;
       }
     }
 
     function renderError () {
-      console.log('you have hit the renderError function');
       if(typeof errorMessage === 'string') {
         return (
-          <ErrorModal/>
+          <ErrorModal message={errorMessage}/>
         )
       }
     }
