@@ -24,4 +24,4 @@ This website hits the openweathermap api to access current weather based on a lo
 [weatherApp](http://limitless-fortress-11991.herokuapp.com/#/?_k=l0gnqo)
 
 ### Weather App Runthrough
-![Preview of Weather App](/public/images/weaatherAppPreview.gif?raw=true)
+![Preview of Weather App](/public/images/weatherAppPreview.gif?raw=true)
